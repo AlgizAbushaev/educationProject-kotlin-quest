@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: yourname
+      changes:
+        - sqlFile:
+            path: classpath:db/changelog/main.sql
+            relativeToChangelogFile: true
