@@ -23,4 +23,12 @@ CREATE TABLE IF NOT EXISTS main.solution(
     submission_date TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS main.test_cases (
+    id UUID PRIMARY KEY,
+    task_id UUID REFERENCES task(id) ON DELETE CASCADE,
+    input TEXT NOT NULL,
+    expected_output TEXT NOT NULL
+);
+
+
 
